@@ -12,13 +12,17 @@ class Usuario
     public $email;
     public $senha;
     public $id;
+    public $deficiencia;
+    public $login;
 
-    public function __construct($nome,$email,$senha,$id)
+    public function __construct($nome,$email,$deficiencia,$login,$senha,$id)
     {
         $this->nome = $nome;
         $this->email= $email;
         $this->senha= $senha;
         $this->id= $id;
+        $this->deficiencia = $deficiencia;
+        $this->login = $login;
 
     }
 
@@ -86,7 +90,37 @@ class Usuario
         $this->id_usuario = $id_usuario;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getDeficiencia()
+    {
+        return $this->deficiencia;
+    }
 
+    /**
+     * @param mixed $deficiencia
+     */
+    public function setDeficiencia($deficiencia)
+    {
+        $this->deficiencia = $deficiencia;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param mixed $login
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+    }
 
 }
 
